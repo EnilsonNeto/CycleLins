@@ -1,0 +1,82 @@
+* {
+  color: #fff;
+}
+
+ul li {
+  list-style: none;
+}
+
+.header {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.item-count {
+  position: absolute;
+  margin-bottom: 25px;
+  margin-left: 25px;
+  background-color: rgb(0, 255, 136);
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 12px;
+}
+
+.logoName {
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: default;
+  align-items: center;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Jost', sans-serif;
+}
+
+.btnMenu{
+  cursor: pointer;
+}
+
+#exit{
+  font-size: 24px;
+}
+
+.menu{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  padding-top: 10px;
+}
+
+mat-icon, button{
+  background-color: transparent;
+  border: none;
+}
+
+.listBtn{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.custom-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spacer {
+  flex: 1;
+}
+

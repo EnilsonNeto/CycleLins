@@ -1,0 +1,45 @@
+<mat-toolbar color="primary" class="custom-toolbar">
+  <mat-toolbar-row>
+    <button class="btnMenu" mat-icon-button (click)="toggleSideBar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="logo">
+      <mat-icon class="cycle"> directions_bike</mat-icon>
+      <span class="logoName">CycleLins</span>
+  </div>
+
+    <div class="spacer"></div>
+
+    <div class="listBtn">
+      <ul fxLayout="row" fxLayoutGap="20px" class="listBtn">
+        <li>
+          <button mat-icon-button class="menu">
+            <mat-icon class="cart-icon">shopping_cart</mat-icon>
+            <span class="item-count">1</span>
+          </button>
+        </li>
+        <li>
+          <button class="menu" [matMenuTriggerFor]="menu">
+            <mat-icon id="exit">person_outline</mat-icon>
+            <b>Enilson</b>
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>settings</mat-icon>
+              Configurações
+            </button>
+            <button mat-menu-item>
+              <mat-icon>help_outline</mat-icon>
+              Ajuda
+            </button>
+            <button mat-menu-item>
+              <mat-icon>exit_to_app</mat-icon>
+              Sair
+            </button>
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

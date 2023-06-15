@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  background-image: url(https://media.tenor.com/mw-j2MHnFl0AAAAd/mtb-mountain-bike.gif);
+  width: 100%;
+  max-width: 100%;
+  opacity: 0.3;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+
+.heading {
+  margin-top: 2rem;
+  font-size: 3rem;
+  font-family: 'Jost', sans-serif;
+}
+
+.title {
+  padding: 20px;
+  cursor:default;
+}
+
+.main {
+  text-align: center;
+  align-items: center;
+  overflow-x: hidden;
+  padding-bottom: 5rem;
+}
+
+.section {
+  background-color: #000;
+  width: 100vw;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+mat-card {
+  width: 30%;
+  padding: 3rem;
+}
+
+.location{
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  background-color: #9a0038;
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3rem;
+  h2{
+    padding: 2rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1000px){
+  .cards{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

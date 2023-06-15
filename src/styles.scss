@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+
+@include mat.core();
+
+$steps-primary: mat.define-palette(mat.$blue-palette);
+$steps-accent: mat.define-palette(mat.$indigo-palette, 900);
+$custom-color: #9a0038;
+// The warn palette is optional (defaults to red).
+$steps-warn: mat.define-palette(mat.$red-palette);
+
+$steps-theme: mat.define-light-theme((
+  color: (
+    primary: (
+      default: $custom-color,
+      lighter: lighten($custom-color, 10%),
+      darker: darken($custom-color, 10%)
+    ),
+    accent: $steps-accent,
+    warn: $steps-warn,
+  )
+));
+
+@include mat.all-component-themes($steps-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+table{
+  text-align: center !important;
+}
+
+.mat-horizontal-stepper-header{
+  margin-bottom: 15px !important;
+  display: flex;
+
+  overflow: hidden;
+  align-items: center;
+  margin-left: 45px !important;
+}
+
+.mdc-list{
+  padding: 0 !important;
+}
+
+.mat-step-header{
+  background-color: transparent !important;
+}
+
+
+@media (max-width: 1024px) {
+  .mat-horizontal-stepper-header{
+    padding: 0 !important;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+  }
+
+  .mat-step-header{
+    width: 25px !important;
+    margin-bottom: 15px !important;
+    background-color: transparent !important;
+  }
+
+  .mat-step-header:hover{
+    background-color: transparent !important;
+  }
+
+}
