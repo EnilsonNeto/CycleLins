@@ -6,14 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./default.component.scss'],
 })
 export class DefaultComponent {
-  sideBarOpen = false;
+  sideBarOpen = true;
+  sideBarOpenCart = false;
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
 
 
   sideBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
+  }
+
+  toggleSideCart() {
+    this.sideBarOpenCart = !this.sideBarOpenCart;
   }
 }

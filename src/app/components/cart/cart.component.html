@@ -1,0 +1,20 @@
+<mat-nav-list color="primary" class="sidebar">
+  <mat-divider class="divider"></mat-divider>
+  <div class="navList">
+    <mat-nav-list>
+      <ul *ngFor="let item of itensCarrinho">
+        <div class="itemCart">
+          <img src="{{item.attachment}}" alt="imagem da bike">
+          <li><b>{{ item.nome }} - {{ item.preco | currency: 'BRL' }}</b></li>
+        </div>
+        <button mat-icon-button color="warn" (click)="excluirItemCarrinho(item)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </ul>
+      <div class="finalize">
+        <p>Total: <b>{{ totalPreco | currency: 'BRL' }}</b></p>
+        <button mat-flat-button color="primary">Finalizar Compra</button>
+      </div>
+    </mat-nav-list>
+  </div>
+</mat-nav-list>

@@ -1,20 +1,26 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit } from '@angular/core';
+import { Item } from 'src/app/shared/interfaces/item';
+import { CartService } from 'src/app/shared/services/cart.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  @Output() toggleSideCartForMe: EventEmitter<any> = new EventEmitter();
+  itensCarrinho: number = 0;
 
-  @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
+  constructor(private carrinhoService: CartService) { }
 
-  toggleSideBar() {
-    this.toggleSideBarForMe.emit();
-    setTimeout(() => {
-      window.dispatchEvent(
-        new Event('resize')
-      );
-    }, 300);
+  ngOnInit() {
+    this.carrinhoService.quantidadeItensSubject.subscribe((quantidade: number) => {
+      this.itensCarrinho = quantidade;
+      console.log(quantidade);
+    });
+  }
+
+  toggleSideCart() {
+    this.toggleSideCartForMe.emit();
   }
 }

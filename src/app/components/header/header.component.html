@@ -1,8 +1,5 @@
 <mat-toolbar color="primary" class="custom-toolbar">
   <mat-toolbar-row>
-    <button class="btnMenu" mat-icon-button (click)="toggleSideBar()">
-      <mat-icon>menu</mat-icon>
-    </button>
     <div class="logo">
       <mat-icon class="cycle"> directions_bike</mat-icon>
       <span class="logoName">CycleLins</span>
@@ -13,9 +10,9 @@
     <div class="listBtn">
       <ul fxLayout="row" fxLayoutGap="20px" class="listBtn">
         <li>
-          <button mat-icon-button class="menu">
+          <button mat-icon-button class="menu" (click)="toggleSideCart()">
             <mat-icon class="cart-icon">shopping_cart</mat-icon>
-            <span class="item-count">1</span>
+            <span class="item-count">{{itensCarrinho}}</span>
           </button>
         </li>
         <li>

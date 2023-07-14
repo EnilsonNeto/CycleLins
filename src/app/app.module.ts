@@ -20,6 +20,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DefaultComponent } from './components/default/default.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { DefaultComponent } from './components/default/default.component';
     HeaderComponent,
     SidebarComponent,
     DefaultComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

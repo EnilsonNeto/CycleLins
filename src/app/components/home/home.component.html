@@ -14,7 +14,9 @@
       <br>
       <h3>R$ 1.500,00</h3>
       <br>
-      <button mat-flat-button color="primary">Adicionar ao carrinho</button>
+      <button mat-flat-button color="primary"
+        (click)="adicionarItemAoCarrinho({ id: generateRandomId(8), nome: 'Aveloz 10', preco: 1500 , attachment: 'https://i.pinimg.com/originals/fc/0f/4c/fc0f4cc14a660cabddd7a92ddc56f30c.png' })">Adicionar
+        ao carrinho</button>
     </mat-card>
     <mat-card>
       <img src="https://i.pinimg.com/originals/ba/0b/07/ba0b07e461b7158fbb725401ac4e07cd.png" alt="bike2">
@@ -22,7 +24,10 @@
       <br>
       <h3>R$ 4.500,00</h3>
       <br>
-      <button mat-flat-button color="primary">Adicionar ao carrinho</button>
+      <button mat-flat-button color="primary"
+        (click)="adicionarItemAoCarrinho({ id: generateRandomId(8), nome: 'Felt10V', preco: 4500, attachment: 'https://i.pinimg.com/originals/ba/0b/07/ba0b07e461b7158fbb725401ac4e07cd.png' })">Adicionar
+        ao
+        carrinho</button>
     </mat-card>
     <mat-card>
       <img src="https://www.pngall.com/wp-content/uploads/5/Mountain-Bike-PNG-Image-File.png" alt="bike3">
@@ -30,7 +35,10 @@
       <br>
       <h3>R$ 2.500,00</h3>
       <br>
-      <button mat-flat-button color="primary">Adicionar ao carrinho</button>
+      <button mat-flat-button color="primary"
+        (click)="adicionarItemAoCarrinho({ id: generateRandomId(8), nome: 'Cube 2023', preco: 2500, attachment: 'https://www.pngall.com/wp-content/uploads/5/Mountain-Bike-PNG-Image-File.png' })">Adicionar
+        ao
+        carrinho</button>
     </mat-card>
   </div>
   <div class="location">
