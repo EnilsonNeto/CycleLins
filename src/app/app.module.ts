@@ -2,6 +2,8 @@ import { MatInputModule } from '@angular/material/input';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatSelectModule} from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -18,7 +20,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DefaultComponent } from './components/default/default.component';
 import { CartComponent } from './components/cart/cart.component';
 
@@ -27,7 +28,6 @@ import { CartComponent } from './components/cart/cart.component';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    SidebarComponent,
     DefaultComponent,
     CartComponent,
   ],
@@ -46,7 +46,9 @@ import { CartComponent } from './components/cart/cart.component';
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -16,7 +16,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.carrinhoService.quantidadeItensSubject.subscribe((quantidade: number) => {
       this.itensCarrinho = quantidade;
-      console.log(quantidade);
     });
   }
 
