@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 export class CartComponent implements OnInit {
   itensCarrinho: Item[] = [];
   totalPreco: number = 0;
+  disabled = false;
 
   constructor(private carrinhoService: CartService) { }
 
@@ -18,6 +19,11 @@ export class CartComponent implements OnInit {
     this.carrinhoService.carrinhoSubject.subscribe((itens: Item[]) => {
       this.itensCarrinho = itens;
       this.calcularTotal();
+      if(this.itensCarrinho.length === 0){
+        this.disabled = true;
+      } else {
+        this.disabled = false
+      }
     });
   }
 

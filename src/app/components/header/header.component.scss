@@ -58,6 +58,17 @@ ul li {
   padding-top: 10px;
 }
 
+.menuMobile {
+  display: none;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  padding-top: 10px;
+}
+
 mat-icon,
 button {
   background-color: transparent;
@@ -154,5 +165,17 @@ a:hover {
 
   .navBar{
     display: none;
+  }
+
+  .menuMobile{
+    display: block;
+  }
+
+  .menu{
+    display: none;
+  }
+
+  .item-count{
+    margin-left: 0;
   }
 }

@@ -5,6 +5,9 @@
 .title{
   text-align: center;
 }
+h3{
+  text-align: center;
+}
 
 ul {
   padding: 10px;
@@ -49,4 +52,10 @@ li {
 img{
   width: 50%;
   padding-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+  .finalize{
+    width: 100%;
+  }
 }
