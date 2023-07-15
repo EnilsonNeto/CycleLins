@@ -47,6 +47,13 @@ export class CartService {
     this.salvarCarrinhoNoSessionStorage();
   }
 
+  concluirCompra() {
+    this.itensCarrinho = [];
+    this.atualizarQuantidadeItens();
+    this.carrinhoSubject.next(this.itensCarrinho);
+    this.salvarCarrinhoNoSessionStorage();
+  }
+
   private salvarCarrinhoNoSessionStorage() {
     sessionStorage.setItem(this.sessionStorageKey, JSON.stringify(this.itensCarrinho));
   }

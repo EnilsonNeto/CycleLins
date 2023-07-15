@@ -45,4 +45,33 @@ export class CartComponent implements OnInit {
   calcularTotal() {
     this.totalPreco = this.itensCarrinho.reduce((total, item) => total + item.preco, 0);
   }
+
+  concluedPurchase() {
+    if (this.itensCarrinho.length != 0) {
+      Swal.fire({
+        icon: 'warning',
+        title: `Você tem certeza que deseja concluir sua compra?`,
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Concluir',
+        cancelButtonText: 'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.carrinhoService.concluirCompra();
+          Swal.fire({
+            icon: 'success',
+            title: 'Compra concluida com sucesso!',
+            text: 'Aguarde em breve entraremos em contato.',
+            timer: 2000,
+          });
+        }
+      });
+    } else {
+      Swal.fire({
+        title: 'Você não possui nenhum item no carrinho!',
+        timer: 2000,
+      });
+    }
+  }
 }

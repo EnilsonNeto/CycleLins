@@ -13,7 +13,7 @@
       </ul>
       <div class="finalize">
         <p>Total: <b>{{ totalPreco | currency: 'BRL' }}</b></p>
-        <button mat-flat-button color="primary">Finalizar Compra</button>
+        <button mat-flat-button color="primary" (click)="concluedPurchase()">Finalizar Compra</button>
       </div>
     </mat-nav-list>
   </div>
