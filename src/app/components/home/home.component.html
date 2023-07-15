@@ -1,13 +1,21 @@
 <div class="main">
   <div class="section">
     <div class="background">
+      <div class="background-overlay"></div>
+      <div class="logo">
+        <mat-icon class="cycle">directions_bike</mat-icon>
+        <div class="logoTitle">
+          <span class="logoName">CycleLins</span>
+          <p>Confiança e segurança no pedal</p>
+        </div>
+      </div>
     </div>
   </div>
   <div class="title">
     <h1 class="heading">Leve sua aventura ao extremo!</h1>
     <h4>Confira nossas ofertas</h4>
   </div>
-  <div class="cards">
+  <div class="cards" id="bikes">
     <mat-card>
       <img src="https://i.pinimg.com/originals/fc/0f/4c/fc0f4cc14a660cabddd7a92ddc56f30c.png" alt="bike1">
       <h1>Aveloz 10</h1>
@@ -41,10 +49,11 @@
         carrinho</button>
     </mat-card>
   </div>
-  <div class="location">
+  <div class="location" id="localizacao">
     <h2>Onde nos localizamos?</h2>
     <iframe
       src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=R.+Santa+Maria+da+Boa+Vista,+316+-+Jardim+Boa+Vista,+Caruaru+-+PE,+55038-180"
       width="600" height="400" frameborder="0" style="border:0; width: 80%;" allowfullscreen=""></iframe>
   </div>
 </div>
+<app-footer></app-footer>

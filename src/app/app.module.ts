@@ -22,6 +22,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DefaultComponent } from './components/default/default.component';
 import { CartComponent } from './components/cart/cart.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CartComponent } from './components/cart/cart.component';
     HeaderComponent,
     DefaultComponent,
     CartComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,7 @@ import { CartComponent } from './components/cart/cart.component';
     ReactiveFormsModule,
     MatInputModule,
     MatSnackBarModule,
-    MatSelectModule
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

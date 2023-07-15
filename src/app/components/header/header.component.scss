@@ -28,11 +28,10 @@ ul li {
 .logoName {
   font-size: 2rem;
   font-weight: 600;
-  cursor: default;
   align-items: center;
 }
 
-.logo{
+.logo {
   display: flex;
   align-items: center;
   text-align: center;
@@ -40,15 +39,15 @@ ul li {
   font-family: 'Jost', sans-serif;
 }
 
-.btnMenu{
+.btnMenu {
   cursor: pointer;
 }
 
-#exit{
+#exit {
   font-size: 24px;
 }
 
-.menu{
+.menu {
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -59,12 +58,13 @@ ul li {
   padding-top: 10px;
 }
 
-mat-icon, button{
+mat-icon,
+button {
   background-color: transparent;
   border: none;
 }
 
-.listBtn{
+.listBtn {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -80,3 +80,79 @@ mat-icon, button{
   flex: 1;
 }
 
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 7rem;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navBar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  a {
+    font-size: 2rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+}
+
+a:hover {
+  color: #b9b9b9;
+  transition: 0.5s;
+}
+
+.reponsiveBar {
+  display: flex;
+  flex-direction: row;
+}
+
+.menuOpen {
+  background-color: #9a0038 !important;
+}
+
+.menuUl {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  display: flex;
+  padding: 0;
+  width: 180px;
+  height: 100%;
+}
+
+.iconMenu{
+  color: #9a0038;
+}
+
+.listMenu{
+  color: #000;
+}
+
+.listMenu:hover{
+  color: #000;
+  transition: 0;
+}
+
+.menuItens{
+  display: none;
+}
+
+@media (max-width: 800px){
+  .menuItens{
+    display: block;
+  }
+
+  .navBar{
+    display: none;
+  }
+}

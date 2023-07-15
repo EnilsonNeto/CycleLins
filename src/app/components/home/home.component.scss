@@ -4,15 +4,43 @@
 }
 
 .background {
-  background-image: url(https://media.tenor.com/mw-j2MHnFl0AAAAd/mtb-mountain-bike.gif);
+  position: relative;
   width: 100%;
   max-width: 100%;
-  opacity: 0.3;
   height: 450px;
+  background-image: url(https://media.tenor.com/mw-j2MHnFl0AAAAd/mtb-mountain-bike.gif);
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
 }
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-color: black;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Jost', sans-serif;
+  color: #fff;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 5rem;
+
+  p{
+    font-size: 20px;
+  }
+}
+
 
 .heading {
   margin-top: 2rem;
@@ -22,7 +50,7 @@
 
 .title {
   padding: 20px;
-  cursor:default;
+  cursor: default;
 }
 
 .main {
@@ -48,7 +76,7 @@ mat-card {
   padding: 3rem;
 }
 
-.location{
+.location {
   margin-top: 45px;
   display: flex;
   flex-direction: column;
@@ -58,16 +86,23 @@ mat-card {
   align-items: center;
   justify-content: center;
   padding-bottom: 3rem;
-  h2{
+
+  h2 {
     padding: 2rem;
     font-size: 2rem;
   }
 }
 
-@media (max-width: 1000px){
-  .cards{
+@media (max-width: 1000px) {
+  .cards {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  mat-card{
+    width: 60%;
+    padding: 3rem;
+    margin-bottom: 1rem;
   }
 }
